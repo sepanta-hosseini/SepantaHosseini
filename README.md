@@ -2,6 +2,8 @@
 
 A responsive, glassmorphism digital contact card with social links, contact-card downloads, a QR code, and creator toast.
 
+## https://sepanta-hosseini.github.io/SepantaHosseini/
+
 ## Files
 - `index.html`: accessible page markup
 - `style.css`: styles and motion effects
