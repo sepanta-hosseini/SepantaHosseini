@@ -1,71 +1,237 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#07131d">
-  <meta name="description" content="Sepanta Hosseini | Python Developer, AI and Machine Learning enthusiast">
-  <title>Sepanta Hosseini | Digital Profile</title>
-  <link rel="stylesheet" href="style.css?v=mobile-fix-2">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#08090b">
+    <meta name="description" content="Sepanta Hosseini — Developer Portfolio">
+
+    <title>Sepanta Hosseini | Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
+
 <body>
-  <div class="ambient ambient-one" aria-hidden="true"></div>
-  <div class="ambient ambient-two" aria-hidden="true"></div>
-  <main class="page-shell">
-    <article class="profile-card">
-      <div class="top-line"><span class="status-dot"></span> DIGITAL PROFILE</div>
-      <section class="identity" aria-label="Profile">
-        <div class="avatar-orbit" style="width:148px;height:148px;position:relative;margin:0 auto 17px;border-radius:50%;display:grid;place-items:center;">
-          <div class="avatar-glow"></div>
-          <div class="scorpion-mark" aria-hidden="true"></div>
-          <img class="avatar" width="140" height="140" style="width:140px;height:140px;max-width:140px;object-fit:cover;object-position:center 35%;border-radius:50%;display:block;" src="assets/profile.jpg" alt="Sepanta Hosseini">
-        </div>
-        <p class="eyebrow">HELLO, I'M</p>
-        <h1>Sepanta Hosseini</h1>
-        <p class="role">Python Developer <span>·</span> AI &amp; Machine Learning</p>
-        <p class="bio">Building, learning, and turning ideas into useful things.</p>
-      </section>
 
-      <section class="social-section" aria-label="Social links">
-        <p class="section-label">FIND ME ONLINE</p>
-        <div class="social-list">
-          <a class="social-button linkedin" href="https://www.linkedin.com/in/sepanta-hosseini-56453039a/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-            <span class="social-mark">in</span><span>LinkedIn</span><span class="social-arrow">↗</span>
-          </a>
-          <a class="social-button github" href="https://github.com/sepanta-hosseini" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-            <span class="social-mark">GH</span><span>GitHub</span><span class="social-arrow">↗</span>
-          </a>
-          <a class="social-button telegram" href="https://t.me/SXYOo5" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
-            <span class="social-mark">➤</span><span>Telegram</span><span class="social-arrow">↗</span>
-          </a>
-          <a class="social-button instagram" href="https://www.instagram.com/sepantahosseini46/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-            <span class="social-mark">◎</span><span>Instagram</span><span class="social-arrow">↗</span>
-          </a>
-        </div>
-      </section>
-      <section class="contact-section" aria-label="Contact options">
-        <p class="section-label">QUICK CONTACT</p>
-        <div class="contact-grid">
-          <button class="contact-button" id="saveContact" type="button" aria-label="Save contact as Mr. Hosseini">
-            <span class="contact-icon">＋</span><span>Phone</span>
-          </button>
-          <a class="contact-button" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=hosseinisepanta05%40gmail.com&amp;su=Hello%20Sepanta" aria-label="Compose email">
-            <span class="contact-icon">✉</span><span>Email</span>
-          </a>
-          <button class="contact-button" id="downloadQrContact" type="button" aria-label="Save contact card with social links">
-            <span class="contact-icon">▦</span><span>QR / Save</span>
-          </button>
-        </div>
-      </section>
+    <canvas id="background-canvas"></canvas>
 
-      <button class="creator-link" id="creatorNotice" type="button">
-        <span class="creator-icon">✦</span><span><strong>Crafted by</strong><small>Digital Card Creators</small></span><span class="creator-arrow">↗</span>
-      </button>
-      <footer>© <span id="year"></span> SEPANTA HOSSEINI <span class="footer-dot">•</span> MADE WITH CARE</footer>
-    </article>
-    <p class="page-note">A small digital space to connect.</p>
-  </main>
-  <div class="toast" id="toast" role="status" aria-live="polite"></div>
-  <script src="script.js"></script>
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+
+    <header class="navbar">
+        <a href="#" class="brand">
+            <span class="brand-mark">S</span>
+            <span>SEPANTA</span>
+        </a>
+
+        <div class="nav-actions">
+            <a href="#projects" class="nav-link">Projects</a>
+
+            <button
+                class="theme-toggle"
+                id="theme-toggle"
+                aria-label="Toggle theme"
+                title="Toggle theme"
+            >
+                <span id="theme-icon">☀</span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="hero section-container">
+
+            <div class="hero-content">
+
+                <div class="status-badge">
+                    <span class="status-dot"></span>
+                    <span>Available for opportunities</span>
+                </div>
+
+                <p class="hero-label">HELLO, I'M</p>
+
+                <h1>
+                    Sepanta
+                    <span>Hosseini.</span>
+                </h1>
+
+                <h2 class="hero-role">
+                    Python Developer <span>·</span> AI & Machine Learning
+                </h2>
+
+                <p class="hero-description">
+                    Building intelligent solutions, exploring artificial intelligence
+                    and turning ideas into practical digital experiences.
+                </p>
+
+                <div class="hero-actions">
+                    <a
+                        href="https://github.com/sepanta-hosseini"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="btn btn-primary"
+                    >
+                        Explore GitHub
+                        <span>↗</span>
+                    </a>
+
+                    <a href="#contact" class="btn btn-secondary">
+                        Contact Me
+                    </a>
+                </div>
+
+                <div class="social-links">
+
+                    <a href="https://github.com/sepanta-hosseini"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        GitHub
+                    </a>
+
+                    <span class="social-divider">/</span>
+
+                    <a href="#contact">
+                        Contact
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="hero-visual">
+
+                <div class="profile-frame">
+
+                    <div class="profile-glow"></div>
+
+                    <img
+                        src="assets/profile.jpg"
+                        alt="Sepanta Hosseini"
+                        class="profile-image"
+                    >
+
+                    <div class="profile-card">
+
+                        <div class="profile-card-indicator"></div>
+
+                        <div>
+                            <p class="profile-card-name">Sepanta Hosseini</p>
+                            <p class="profile-card-role">Developer & AI Enthusiast</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="floating-tag tag-top">
+                    <span>⌘</span> Creative Development
+                </div>
+
+                <div class="floating-tag tag-bottom">
+                    <span>✦</span> Artificial Intelligence
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="projects-section section-container" id="projects">
+
+            <div class="section-heading">
+                <p class="hero-label">DISCOVER</p>
+                <h2>Explore My <span>Work.</span></h2>
+                <p>
+                    Projects, experiments and ideas brought to life.
+                </p>
+            </div>
+
+            <div class="qr-card">
+
+                <div class="qr-content">
+                    <span class="qr-label">MY PROJECT COLLECTION</span>
+
+                    <h3>Explore my projects</h3>
+
+                    <p>
+                        Scan the QR code to discover my repositories,
+                        projects and development journey.
+                    </p>
+
+                    <a
+                        href="https://github.com/sepanta-hosseini"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="qr-link"
+                    >
+                        Visit GitHub <span>↗</span>
+                    </a>
+                </div>
+
+                <div class="qr-image-wrapper">
+                    <img
+                        src="assets/qr-code.png"
+                        alt="Sepanta's GitHub QR Code"
+                        class="qr-image"
+                    >
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="contact-section section-container" id="contact">
+
+            <div class="section-heading">
+                <p class="hero-label">GET IN TOUCH</p>
+                <h2>Let's connect.</h2>
+                <p>Have an idea or an opportunity? Let's talk.</p>
+            </div>
+
+            <div class="contact-actions">
+
+                <a
+                    href="https://github.com/sepanta-hosseini"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn-primary"
+                >
+                    GitHub <span>↗</span>
+                </a>
+
+                <button class="btn btn-secondary" id="save-contact">
+                    Save Contact
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>Designed & developed with intention.</p>
+        <p>© <span id="year"></span> Sepanta Hosseini</p>
+    </footer>
+
+    <script src="js/theme.js"></script>
+    <script src="js/background.js"></script>
+    <script src="js/cursor.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/scroll.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/main.js"></script>
+
 </body>
 </html>
