@@ -1,0 +1,227 @@
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes fade-up {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 0.6;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+.hero-content {
+    animation: fade-up 900ms ease both;
+}
+
+.hero-visual {
+    animation: fade-up 1100ms ease both;
+}
+
+.floating-tag {
+    animation: float 5s ease-in-out infinite;
+}
+
+.tag-bottom {
+    animation-delay: -2.5s;
+}
+
+.status-dot {
+    animation: pulse 2s ease infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Custom cursor */
+
+.cursor-dot,
+.cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 9999;
+  border-radius: 50%;
+  will-change: transform;
+}
+
+.cursor-dot {
+  width: 5px;
+  height: 5px;
+  background: var(--accent);
+  margin: -2.5px 0 0 -2.5px;
+  opacity: 0;
+}
+
+.cursor-ring {
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--accent);
+  margin: -16px 0 0 -16px;
+  opacity: 0;
+  transition:
+    width 250ms ease,
+    height 250ms ease,
+    margin 250ms ease,
+    background 250ms ease,
+    opacity 250ms ease;
+}
+
+.cursor-hover {
+  width: 46px;
+  height: 46px;
+  margin: -23px 0 0 -23px;
+  background: rgba(214, 180, 106, 0.08);
+}
+
+/* Touch trail */
+
+.touch-trail {
+  position: fixed;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+  animation: touchFade 500ms ease-out forwards;
+}
+
+@keyframes touchFade {
+  0% {
+    opacity: 0.65;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.2);
+  }
+}
+
+/* Desktop only */
+
+@media (pointer: fine) {
+  .cursor-dot,
+  .cursor-ring {
+    opacity: 1;
+  }
+}
+
+/* Mobile */
+
+@media (pointer: coarse) {
+  .cursor-dot,
+  .cursor-ring {
+    display: none;
+  }
+}
+
+/* Reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+  .cursor-dot,
+  .cursor-ring,
+  .touch-trail {
+    display: none !important;
+  }
+}
+/* Scroll Reveal System */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  filter: blur(4px);
+
+  transition:
+    opacity 700ms ease,
+    transform 700ms cubic-bezier(0.22, 1, 0.36, 1),
+    filter 700ms ease;
+
+  will-change: opacity, transform;
+}
+
+.reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+  will-change: auto;
+}
+
+/* Stagger animation */
+
+.section-heading.reveal {
+  transition-delay: 100ms;
+}
+
+.qr-card.reveal {
+  transition-delay: 150ms;
+}
+
+.contact-card.reveal {
+  transition-delay: 100ms;
+}
+
+/* Reveal from different directions */
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-35px);
+  transition: 700ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(35px);
+  transition: 700ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal-left.revealed,
+.reveal-right.revealed {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal-left,
+  .reveal-right {
+    opacity: 1;
+    transform: none;
+    filter: none;
+    transition: none;
+    will-change: auto;
+  }
+}
