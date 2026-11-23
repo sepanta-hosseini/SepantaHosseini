@@ -1,21 +1,18 @@
-# Sepanta Hosseini Digital Profile
+# Artax Dev — Sepanta Hosseini 3D Digital Card
+Pure HTML / CSS / JS (no build step). This profile presents Sepanta as a mechanical engineering student exploring Python, AI, and machine learning for engineering applications. It avoids claiming a specific AI specialization or professional expertise not demonstrated by the public portfolio. Works on GitHub Pages as-is.
 
-A responsive, glassmorphism digital contact card with social links, contact-card downloads, a QR code, and creator toast.
+## Deploy
+Repo -> Settings -> Pages -> Deploy from branch `main` / root. Done.
+Local test: `python -m http.server` then open http://localhost:8000
+(double-clicking index.html will not work - the card loads JSON through AJAX.)
 
-## https://sepanta-hosseini.github.io/SepantaHosseini/
+## Profiles
+- `/`            -> Sepanta Hosseini (data/sepanta.json)
+- `/?p=kiyan`    -> Kiyan Rahmati   (data/kiyan.json)
+Add a new person: copy a JSON file in `data/`, open `/?p=filename`.
 
-## Files
-- `index.html`: accessible page markup
-- `style.css`: styles and motion effects
-- `script.js`: contact vCard downloads, QR/contact action, creator notice, current year
-- `assets/profile.jpg`: profile photo
-- `assets/qr-code.png`: contact QR (phone, email, Telegram, Instagram, GitHub, LinkedIn)
+## Photos
+Put `assets/img/sepanta.jpg` and `assets/img/kiyan.jpg` (square, 600x600+). A placeholder shows until then.
 
-## Run locally
-Open `index.html` in a browser. For best mobile download behavior, use a local static server or publish via GitHub Pages.
-
-## Contact details
-- Phone: `+989112362558`
-- Telegram: `@SXYOo5`
-- Instagram: `sepantahosseini46`
-- Email is currently retained as provided in the source: `hosseinisepanta05@gmial.com` (please confirm spelling before publishing).
+## Edit
+Profile text, links, tags, phone -> `data/*.json` | UI texts -> `lang/*.json` | Neural net + liquid -> `js/bg.js`, end of `css/style.css`

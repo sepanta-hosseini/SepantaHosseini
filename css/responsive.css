@@ -1,108 +1,15 @@
-@media (max-width: 900px) {
-    .hero {
-        grid-template-columns: 1fr;
-        gap: 80px;
-
-        padding-top: 70px;
-        text-align: center;
-    }
-
-    .hero-content {
-        margin: auto;
-    }
-
-    .hero-description {
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .hero-actions,
-    .social-links {
-        justify-content: center;
-    }
-
-    .hero-visual {
-        width: 100%;
-    }
-
-    .tag-top {
-        right: 0;
-    }
-
-    .tag-bottom {
-        left: 0;
-    }
+@media (max-width:700px){
+ .scene{width:min(92vw,360px);height:590px}
+ .front{grid-template-columns:1fr;justify-items:center;text-align:center;gap:16px;padding:60px 22px 64px;align-content:start}
+ .photo-wrap{width:150px;height:150px}
+ h1{font-size:34px}.role{font-size:14px}
+ .icons{justify-content:center}.icons a{width:42px;height:42px}
+ .scorp{top:auto;bottom:70px;width:200px;opacity:.28}
+ .status{top:16px;inset-inline-end:auto}
+ .connect{inset-inline-start:0;width:100%;justify-content:center}
+ .back{grid-template-columns:1fr;gap:14px;padding:26px 22px}
+ .about p{margin-bottom:16px}
+ .side{border:0;padding:0;border-top:1px solid rgba(240,185,74,.25);padding-top:14px;flex-direction:row;flex-wrap:wrap;justify-content:center;gap:10px}
+ .qr{width:104px;height:104px}.scan{display:none}.sign{width:100%;font-size:28px}
 }
-
-@media (max-width: 600px) {
-    .navbar {
-        padding: 22px 0;
-    }
-
-    .section-container {
-        width: calc(100% - 36px);
-    }
-
-    .hero {
-        min-height: auto;
-        padding-top: 65px;
-        padding-bottom: 80px;
-        gap: 65px;
-    }
-
-    .hero h1 {
-        font-size: 57px;
-        letter-spacing: -3.5px;
-    }
-
-    .hero-role {
-        font-size: 14px;
-        line-height: 1.8;
-    }
-
-    .hero-description {
-        font-size: 13px;
-    }
-
-    .profile-frame {
-        width: min(290px, 85vw);
-    }
-
-    .floating-tag {
-        font-size: 9px;
-        padding: 10px;
-    }
-
-    .projects-section,
-    .contact-section {
-        padding-top: 65px;
-        padding-bottom: 65px;
-    }
-
-    .qr-card {
-        flex-direction: column;
-        text-align: center;
-        padding: 25px 20px;
-        gap: 30px;
-    }
-
-    .qr-content h3 {
-        font-size: 24px;
-    }
-
-    .footer {
-        flex-direction: column;
-        text-align: center;
-        padding: 28px 0;
-    }
-
-    .nav-actions {
-        gap: 17px;
-    }
-}
-
-@media (hover: none) {
-    .floating-tag {
-        animation: none;
-    }
-}
+@media (max-height:700px){body{overflow-y:auto}.stage{height:auto;min-height:100%;justify-content:flex-start;padding-top:56px}}
