@@ -1,0 +1,68 @@
+{
+  "id": "sepanta-hosseini",
+  "phone": "+989112362558",
+  "photo": "assets/img/sepanta.jpg",
+  "site": "https://github.com/sepanta-hosseini",
+  "links": [
+    {
+      "key": "github",
+      "url": "https://github.com/sepanta-hosseini",
+      "title": "GitHub"
+    },
+    {
+      "key": "telegram",
+      "url": "https://t.me/SsXy05",
+      "title": "Telegram"
+    },
+    {
+      "key": "instagram",
+      "url": "https://instagram.com/sepantahosseini46",
+      "title": "Instagram"
+    },
+    {
+      "key": "email",
+      "url": "mailto:hosseinisepanta05@gmial.com",
+      "title": "Email"
+    },
+    {
+      "key": "phone",
+      "url": "tel:+989112362558",
+      "title": "Phone"
+    }
+  ],
+  "stack": [
+    [
+      "Python",
+      "#3776ab"
+    ],
+    [
+      "AI & Machine Learning",
+      "#7c3aed"
+    ],
+    [
+      "Engineering Applications",
+      "#22b8e0"
+    ]
+  ],
+  "en": {
+    "name": "Sepanta Hosseini",
+    "name1": "SEPANTA",
+    "name2": "HOSSEINI",
+    "role": "Mechanical Engineering Student · AI Enthusiast",
+    "spec": "Exploring Python and AI for practical engineering solutions.",
+    "vn": "Hosseini;Sepanta",
+    "about": "Mechanical engineering student exploring Python programming, artificial intelligence, and machine learning, with an interest in applying intelligent tools to real-world engineering challenges."
+  },
+  "fa": {
+    "name": "سپنتا حسینی",
+    "name1": "سپنتا",
+    "name2": "حسینی",
+    "role": "دانشجوی مهندسی مکانیک · علاقه‌مند به هوش مصنوعی",
+    "spec": "بررسی پایتون و هوش مصنوعی برای حل مسائل کاربردی مهندسی",
+    "vn": "حسینی;سپنتا",
+    "about": "دانشجوی مهندسی مکانیک، علاقه‌مند به برنامه‌نویسی پایتون، هوش مصنوعی و یادگیری ماشین؛ با تمرکز بر استفاده از ابزارهای هوشمند برای چالش‌های واقعی مهندسی."
+  },
+  "email": "hosseinisepanta05@gmial.com",
+  "title": "Mechanical Engineering Student · AI Enthusiast",
+  "bio": "Exploring Python, AI, and machine learning for practical engineering applications."
+}

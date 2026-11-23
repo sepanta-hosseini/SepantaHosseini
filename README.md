@@ -1,24 +1,18 @@
-# SCORPION — Interactive AI Identity Card
+# Artax Dev — Sepanta Hosseini 3D Digital Card
+Pure HTML / CSS / JS (no build step). This profile presents Sepanta as a mechanical engineering student exploring Python, AI, and machine learning for engineering applications. It avoids claiming a specific AI specialization or professional expertise not demonstrated by the public portfolio. Works on GitHub Pages as-is.
 
-A single-page bilingual digital business card built with HTML, CSS, and vanilla JavaScript. Includes theme switch, Persian/English, canvas particles, cursor spotlight, card tilt, magnetic contact tiles, animated Saturn-like portrait rings, scanner, clock, touch trail, click waves, scorpion mascot Easter egg, Konami Code, and downloadable VCard.
+## Deploy
+Repo -> Settings -> Pages -> Deploy from branch `main` / root. Done.
+Local test: `python -m http.server` then open http://localhost:8000
+(double-clicking index.html will not work - the card loads JSON through AJAX.)
 
-## Personalize
-1. Add Sepanta's portrait as `assets/sepanta.jpg` (square crop works best).
-2. Edit `js/profile.js` with real phone, Telegram, Instagram, GitHub and email values.
-3. Update the text in `index.html` if desired.
+## Profiles
+- `/`            -> Sepanta Hosseini (data/sepanta.json)
+- `/?p=kiyan`    -> Kiyan Rahmati   (data/kiyan.json)
+Add a new person: copy a JSON file in `data/`, open `/?p=filename`.
 
-## Run locally
-Because the project loads a profile script locally, open it through a local server rather than `file://`:
+## Photos
+Put `assets/img/sepanta.jpg` and `assets/img/kiyan.jpg` (square, 600x600+). A placeholder shows until then.
 
-```bash
-cd scorpion-card
-python3 -m http.server 8000
-```
-Then visit http://localhost:8000
-
-## Notes
-- No server-side code and no contact information is sent to a backend.
-- Theme and language preference are stored in localStorage.
-- Five clicks on the scorpion unlock a small hidden mode.
-- Konami Code: Up Up Down Down Left Right Left Right B A.
-- Accessibility: reduced-motion disables most motion effects.
+## Edit
+Profile text, links, tags, phone -> `data/*.json` | UI texts -> `lang/*.json` | Neural net + liquid -> `js/bg.js`, end of `css/style.css`

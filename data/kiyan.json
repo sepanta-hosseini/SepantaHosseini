@@ -1,0 +1,66 @@
+{
+ "id": "kiyan-rahmati",
+ "phone": "",
+ "photo": "assets/img/kiyan.jpg",
+ "site": "https://github.com/kiyan-rahmati",
+ "links": [
+  {
+   "key": "github",
+   "url": "https://github.com/kiyan-rahmati",
+   "title": "GitHub"
+  },
+  {
+   "key": "linkedin",
+   "url": "https://www.linkedin.com/in/kiyan-rahmati",
+   "title": "LinkedIn"
+  }
+ ],
+ "stack": [
+  [
+   "React",
+   "#22b8e0"
+  ],
+  [
+   "JavaScript",
+   "#f7df1e"
+  ],
+  [
+   "PHP",
+   "#777bb3"
+  ],
+  [
+   "Laravel",
+   "#ff2d20"
+  ],
+  [
+   "Next.js",
+   "#e5e5e5"
+  ],
+  [
+   "Tailwind",
+   "#38bdf8"
+  ],
+  [
+   "Bootstrap",
+   "#7952b3"
+  ]
+ ],
+ "en": {
+  "name": "Kiyan Rahmati",
+  "name1": "KIYAN",
+  "name2": "RAHMATI",
+  "role": "Full-Stack & AI Developer",
+  "spec": "Full-Stack · AI · Web Engineering",
+  "vn": "Rahmati;Kiyan",
+  "about": "Computer Engineering student and full-stack developer. I build real web products - marketplaces, booking platforms and AI-powered tools."
+ },
+ "fa": {
+  "name": "کیان رحمتی",
+  "name1": "کیان",
+  "name2": "رحمتی",
+  "role": "توسعه‌دهنده فول‌استک و هوش مصنوعی",
+  "spec": "فول‌استک · هوش مصنوعی · مهندسی وب",
+  "vn": "رحمتی;کیان",
+  "about": "دانشجوی مهندسی کامپیوتر و توسعه‌دهنده فول‌استک. محصولات واقعی وب می‌سازم؛ از بازارچه و رزرواسیون تا ابزارهای مبتنی بر هوش مصنوعی."
+ }
+}
